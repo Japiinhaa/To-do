@@ -1,27 +1,14 @@
 from Model import *
+from Dao import *
 import os
 
 class ControllerAdicionarTarefa():
     def __init__(self, tarefa):
-
-        try:
-            if tarefa == "":
-                print("Digite uma tarefa válida.")
-
-            else:
-
-                try:
-                    self.tarefa = tarefa
-                    if TODO.AdicionarTarefa(self.tarefa) == True:
-                        print("Tarefa adicionada.")
-                    else:
-                        print("Algum problema foi encontrado.")
-
-                except Exception as erro:
-                    print("Erro ao adicionar a tarefa: {erro}")
-
-        except Exception as erro:
-                print("Erro ao adicionar a tarefa: {erro}")
+        self.tarefa = tarefa
+        if DAO.AdicionarTarefa(self.tarefa) == True:
+            print("Tarefa adicionada.")
+        else:
+            print("Algum problema foi encontrado.")
 
 class ControllerExcluirTarefa():
     def __init__(self, excluir):
