@@ -35,7 +35,7 @@ class ControllerExcluirTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
-            tarefas = DAO.ListarTarefas()
+        tarefas = DAO.ListarTarefas()
 
-            for i in range(len(tarefas)):
+        for i in range(len(tarefas)):
                 print(f"{i+1} - {tarefas[i]}")
