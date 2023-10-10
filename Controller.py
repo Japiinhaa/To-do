@@ -5,10 +5,17 @@ import os
 class ControllerAdicionarTarefa():
     def __init__(self, tarefa):
         self.tarefa = tarefa
-        if DAO.AdicionarTarefa(self.tarefa) == True:
-            print("Tarefa adicionada.")
-        else:
-            print("Algum problema foi encontrado.")
+        
+        try:
+
+            if DAO.AdicionarTarefa(self.tarefa) == True:
+                print("Tarefa adicionada.")
+            else:
+                print("Algum problema foi encontrado.")
+
+        except Exception:
+            print("Digite uma tarefa válida.")
+
 
 class ControllerExcluirTarefa():
     def __init__(self, excluir):

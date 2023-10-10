@@ -3,13 +3,9 @@ class Dao:
         self.arquivo =  "Tarefas.txt"
 
     def AdicionarTarefa(self, tarefa):
-        try:
-            with open(self.arquivo, "a") as arquivo:
-                arquivo.write(f"{tarefa}\n")
-                return True
-
-        except Exception as erro:
-            print(f"Erro ao adicionar a tarefa: {erro}")
+        with open(self.arquivo, "a") as arquivo:
+            arquivo.write(f"{tarefa}\n")
+            return True
 
     def ListarTarefas(self):
             return self.lista
