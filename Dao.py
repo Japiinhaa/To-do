@@ -8,6 +8,7 @@ class Dao:
             return True
 
     def ListarTarefas(self):
-            return self.lista
-    
+        with open(self.arquivo, "r") as arquivo:
+            return arquivo.readlines()
+        
 DAO = Dao()

@@ -5,7 +5,7 @@ import os
 class ControllerAdicionarTarefa():
     def __init__(self, tarefa):
         self.tarefa = tarefa
-        
+
         try:
 
             if DAO.AdicionarTarefa(self.tarefa) == True:
@@ -35,9 +35,9 @@ class ControllerExcluirTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
-        ControllerLista = TODO.ListarTarefas()
+        ControllerLista = DAO.ListarTarefas(arquivo)
         cont = 0
 
-        for tarefas in ControllerLista:
+        for arquivo in ControllerLista:
             cont += 1
             print(f"{cont}. {tarefas}")
