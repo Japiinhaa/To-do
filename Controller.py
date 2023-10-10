@@ -35,9 +35,10 @@ class ControllerExcluirTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
-        ControllerLista = DAO.ListarTarefas(arquivo)
-        cont = 0
+        try:
+            tarefas = DAO.ListarTarefas()
+            for i in range(len(tarefas)):
+                print(f"{i+1} - {tarefas[i]}")
 
-        for arquivo in ControllerLista:
-            cont += 1
-            print(f"{cont}. {tarefas}")
+        except Exception:
+            print("Nenhuma tarefa encontrada.")

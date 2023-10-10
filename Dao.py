@@ -9,6 +9,7 @@ class Dao:
 
     def ListarTarefas(self):
         with open(self.arquivo, "r") as arquivo:
-            return arquivo.readlines()
+            tarefas = arquivo.readlines()
+            return tarefas
         
 DAO = Dao()
