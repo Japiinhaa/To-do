@@ -22,15 +22,11 @@ while sair == 0:
             os.system("pause")
 
         case "3":
-            trava = 0
-            while trava == 0:
-                os.system("cls")
-                listarTarefa = ControllerListarTarefa()
-                excluir = input("Digite o número da tarefa que deseja excluir > ")
-                excluirTarefa = ControllerExcluirTarefa(excluir)
-                os.system("pause")
-                
-                trava = 1
+            os.system("cls")
+            listarTarefa = ControllerListarTarefa()
+            excluir = input("Digite o número da tarefa que deseja excluir > ")
+            excluirTarefa = ControllerExcluirTarefa(excluir)
+            os.system("pause")
 
         case "4":
             os.system("cls")
