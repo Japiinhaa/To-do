@@ -8,7 +8,7 @@ class ControllerAdicionarTarefa():
 
         try:
 
-            if DAOAdicionarTarefa(self.tarefa) == True:
+            if DaoAdicionarTarefa(self.tarefa) == True:
                 print("Tarefa adicionada.")
             else:
                 print("Algum problema foi encontrado.")
