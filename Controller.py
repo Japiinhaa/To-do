@@ -2,17 +2,28 @@ from Model import *
 from Dao import *
 import os
 
+with open ("tarefas.txt", "a") as arquivo:
+    arquivo.write("ID - Tarefa\n")
+
 class ControllerAdicionarTarefa():
     def __init__(self, tarefa):
-        self.tarefa = tarefa
 
         try:
-
-            if DaoAdicionarTarefa(self.tarefa) == True:
-                print("Tarefa adicionada.")
+            if tarefa == "":
+                print("Digite uma tarefa válida.")
+            
             else:
-                print("Algum problema foi encontrado.")
+            
+                try:
+                    self.tarefa = tarefa
+                    if TODO.AdicionarTarefa(self.tarefa) == True:
+                        print("Tarefa adicionada.")
+                    else:
+                        print("Algum problema foi encontrado.")
 
+                except Exception:
+                    print("Digite uma tarefa válida.")
+        
         except Exception:
             print("Digite uma tarefa válida.")
 
