@@ -2,12 +2,13 @@ class Dao:
     def __init__(self):
         self.arquivo =  "Tarefas.txt"
 
-    def AdicionarTarefa(self, tarefa):
+    def DAOAdicionarTarefa(self, tarefa, idtarefa):
         with open(self.arquivo, "a") as arquivo:
-            arquivo.write(f"{tarefa}\n")
+            arquivo.write("ID Unico - Tarefas\n")
+            arquivo.write(f"{idtarefa} - {tarefa}\n")
             return True
 
-    def ListarTarefas(self):
+    def DAOListarTarefas(self):
         with open(self.arquivo, "r") as arquivo:
             tarefas = arquivo.readlines()
             return tarefas
