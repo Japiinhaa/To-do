@@ -8,7 +8,7 @@ class ControllerAdicionarTarefa():
 
         try:
 
-            if DAO.AdicionarTarefa(self.tarefa) == True:
+            if DAOAdicionarTarefa(self.tarefa) == True:
                 print("Tarefa adicionada.")
             else:
                 print("Algum problema foi encontrado.")
@@ -35,7 +35,7 @@ class ControllerExcluirTarefa():
 
 class ControllerListarTarefa():
     def __init__(self):
-        tarefas = DAO.ListarTarefas()
+        tarefas = DAOListarTarefas()
 
         for i in range(len(tarefas)):
                 print(f"{i+1} - {tarefas[i]}")
