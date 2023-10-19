@@ -15,7 +15,7 @@ while sair == 0:
             os.system("cls")
             tarefa = input("Digite a tarefa > ")
             adicionarTarefa = ControllerAdicionarTarefa(tarefa)
-            adicionarTarefa = Dao.DAOAdicionarTarefa(tarefa, idtarefa = str(random.randint(0, 1000)))
+            adicionarTarefa = DAOAdicionarTarefa(idtarefa = str(random.randint(0, 1000)))
             os.system("pause")
 
     
