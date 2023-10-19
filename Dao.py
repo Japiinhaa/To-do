@@ -1,4 +1,4 @@
-class DAOAdicionarTarefa():
+class DaoAdicionarTarefa():
     def __init__(self, idtarefa, tarefa):
         with open(self.arquivo, "a") as arquivo:
             arquivo.write(idtarefa)

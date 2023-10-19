@@ -15,12 +15,13 @@ while sair == 0:
             os.system("cls")
             tarefa = input("Digite a tarefa > ")
             adicionarTarefa = ControllerAdicionarTarefa(tarefa)
-            adicionarTarefa = DAOAdicionarTarefa(idtarefa = str(random.randint(0, 1000)))
+            adicionarTarefa = DaoAdicionarTarefa(tarefa, idtarefa = str(random.randint(0, 1000)))
             os.system("pause")
 
     
         case "2":
             os.system("cls")
+            print("Tarefas:")
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
 
